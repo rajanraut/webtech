@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+  	function sendmessage() {
+  		alert('Message Send Successfully...');
+  	}
+  </script>
+</head>
+<body>
+<div class="header">
+  <table align="center" style="width: 100%">
+    <tr><td><img src="headerlogo.jpg" height="120" width="120"></td>
+      <td><h1>Blood Saves Lifes</h1></td>
+    <td>
+ <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+<a href="http://www.google.com" class="fa fa-google"></a>
+<a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
+<a href="http://www.youtube.com" class="fa fa-youtube"></a>
+<a href="http://www.instagram.com" class="fa fa-instagram"></a>
+      </td>
+  </tr>
+  </table>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.htm">Home</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="register.htm">Become a Donor</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="searchdonor.htm">Search Donor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="eventmgnt.php">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus.htm">About Us </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactus.htm">Contact Us</a>
+      </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<form action="contactus.php" method="post">
+   <table align="center" width="50%">
+  <thead><h1 align="center"><u>CONTACT US</u></h1></thead>
+  <hr>
+    <tr><td>Name</td><td><input type="text" required placeholder="Name" name="name1"></td></tr>
+    <tr><td>E-mail</td><td><input type="email" required placeholder="E-mail" name="email1"></td></tr>
+    <tr><td>Subject</td><td><input type="text" placeholder="Subject" name="subject"></td></tr>
+    <tr><td>Message</td><td><textarea style="height: 500px,width:100%" placeholder="write message" name="message" ></textarea>
+    <tr><td><button type="submit" value="submit" name="submit" class="submitbtn" onclick="sendmessage()" ">send message</button></td></tr>
+  </table>
+</form>
+<div class="footer" align="center">
+  <p><h4>&copy; 2018 Blood Saves Life</h4></p>
+</div>
+</body>
+</html>

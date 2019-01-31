@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blood</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+  <table align="center" style="width: 100%">
+    <tr><td><img src="headerlogo.jpg" height="120" width="120"></td>
+      <td><h1>Blood Saves Lifes</h1></td>
+      <td>
+ <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+<a href="http://www.google.com" class="fa fa-google"></a>
+<a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
+<a href="http://www.youtube.com" class="fa fa-youtube"></a>
+<a href="http://www.instagram.com" class="fa fa-instagram"></a>
+      </td>
+  </tr>
+  </table>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.htm">Home</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="register.htm">Become a Donor</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="searchdonor.htm">Search Donor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="eventmgnt.php">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus.htm">About Us </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactus.htm">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<form action="searchdonor.php" method="post">
+  <div class="container" align="center">
+   <center> <h1>Search a Donor</h1>
+    <p>Please provide the data to search the Donor..</p></center>
+    <hr>
+   <table align="center" width="50%">
+
+    <tr><td>Blood Type Required</td>
+    <td>
+  <select name="bloodgroup">
+  <option value="choose blood group">Choose Blood Group</option>
+  <option value="O+">O+</option>
+  <option value="O-">O-</option>
+  <option value="A+">A+</option>
+  <option value="B+">B+</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+  <option value="B-">B-</option>
+  <option value="A-">A-</option>
+  </select> <br/></td></tr>
+    <tr><td>Address</td>
+   <td>
+      <input type="text" placeholder="Enter address" name="address"  required>
+    </td></tr>
+
+    <tr><td><button type="submit" value="submit" name="submit" class="submitbtn" >Search Donor</button></td>
+    </tr>
+  </table>
+ </form>
+ <div class="footer" align="center">
+  <p><h4>&copy; 2018 Blood Saves Life</h4></p>
+</div>
+</body>
+</html>
