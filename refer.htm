@@ -114,7 +114,6 @@ input[type=submit]:hover {
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
@@ -137,33 +136,34 @@ input[type=submit]:hover {
   <a href="donateblood.htm"><i class='fas'>&#xf004;</i><tr>Why Donate Blood?</a>
   <a href="needblood.htm"> Who need Blood?</a>
   <a href="search.htm"><i class="fa fa-fw fa-search"></i> Search</a>
-  <a href="refer.htm"><i class="fa fa-fw fa-user-plus"></i> Refer a Friend</a>
-  <a class="active" href="contactus.htm"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+  <a class="active" href="refer.htm"><i class="fa fa-fw fa-user-plus"></i> Refer a Friend</a>
+  <a href="contactus.htm"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
   <div style="float:right"><a href="login.htm">Login</a></li></div>
 
 </div>
 
-  	<div id="scroll-news">
-   			<span class="marquee-span">
-   			<marquee behavior="scroll" scrollamount="15" scrolldelay="60" direction="left" width="100%" onMouseOver="this.stop();" onMouseOut="this.start();">
-   			<a href="./donateblood.htm"><b style="color:red;font-size:20px">
-   			Donate Blood Save Life....</b></a>
-   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <div id="scroll-news">
+        <span class="marquee-span">
+        <marquee behavior="scroll" scrollamount="15" scrolldelay="60" direction="left" width="100%" onMouseOver="this.stop();" onMouseOut="this.start();">
+        <a href="./donateblood.htm"><b style="color:red;font-size:20px">
+        Donate Blood Save Life....</b></a>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       </marquee>
-   			</span>
-   		</div>
+        </span>
+      </div>
 
-<br/><fieldset>
-<h2 style="color:red">Contact Us</h2>
-
-<div class="container">
-  <form action="contactus.php" method="post">
+<br/>
+<h2 style="color:red">Refer A Friend</h2>
+  <fieldset>
+    <div class="container">
+      <h4 >Your Friend</h4>
+  <form name="refer" action="refer.php" method="post">
   <div class="row">
     <div class="col-25">
-      <label for="name">Full Name</label>
+      <label for="name">Your Name</label>
     </div>
     <div class="col-75">
       <input type="text" id="name" name="name" placeholder="Your Full Name..">
@@ -171,34 +171,55 @@ input[type=submit]:hover {
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="email">Email</label>
+      <label for="email">Your Email</label>
     </div>
     <div class="col-75">
       <input type="text" id="email" name="email" placeholder="Your Email..">
     </div>
   </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Subject</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="subject" name="subject" placeholder="Write about subject..">
-    </div>
+</fieldset>
+<br/>
+<fieldset>
+  <div class="container">
+    <h4 >Your Friend</h4>
+<div class="row">
+  <div class="col-25">
+    <label for="name1">Name</label>
   </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="message">Message</label>
-    </div>
-    <div class="col-75">
-      <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
-    </div>
+  <div class="col-75">
+    <input type="text" id="name1" name="name1" placeholder=" Name..">
   </div>
+</div>
+<div class="row">
+  <div class="col-25">
+    <label for="email1"> Email</label>
+  </div>
+  <div class="col-75">
+    <input type="text" id="email1" name="email1" placeholder="Email..">
+  </div>
+</div>
+<div class="row">
+  <div class="col-25">
+    <label for="name2"> Name</label>
+  </div>
+  <div class="col-75">
+    <input type="text" id="name2" name="name2" placeholder=" Name..">
+  </div>
+</div>
+<div class="row">
+  <div class="col-25">
+    <label for="email2">Email</label>
+  </div>
+  <div class="col-75">
+    <input type="text" id="email2" name="email2" placeholder=" Email..">
+  </div>
+</div>
+</fieldset><br/>
   <div class="row">
-    <input type="submit" value="submit" onclick="sendmessage()" name="submit">
+    <input type="submit" value="submit" name="submit">
   </div>
   </form>
 </div>
-</fieldset>
 <div style="border-top: 1px solid #D8D8D8;border-bottom: 4px solid #B70407;text-align:center;">
    <div style="padding: 8px 0px;">
      <a href="aboutus.htm" class="footerclr">About Us</a>
@@ -215,10 +236,6 @@ input[type=submit]:hover {
    <div style="padding: 8px 0px;">Copyright &copy; Blood Donation 2019. All rights reserved.</div>
   </div>
  </div>
-<script type="text/javascript">
-function sendmessage() {
-  alert('Message Send Successfully...');
-}
-</script>
+<script type="text/javascript" src="blooddonation.js"></script>
 </body>
 </html>

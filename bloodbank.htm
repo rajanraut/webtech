@@ -3,6 +3,8 @@
 <head>
   <title>Blood Donation Campaign</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
@@ -58,75 +60,114 @@ body {
     border: 1px solid #ccc;
   }
 }
-* {
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  color:green;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+form {
+  border: 3px solid #f1f1f1;
+  font-family: Arial;
+}
+
+.container {
+  padding: 20px;
+  background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+input[type=checkbox] {
+  margin-top: 16px;
 }
 
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
-  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  opacity: 0.8;
+}
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
 }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+.icon-bar a:hover {
+  background-color: #000;
 }
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+.facebook {
+  background: #3B5998;
+  color: white;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.twitter {
+  background: #55ACEE;
+  color: white;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+.google {
+  background: #dd4b39;
+  color: white;
 }
 
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
 </style>
 </head>
 <body>
   <header>
     <div >
+
 <h2 align="center" style="color:red">Blood Donation</h2>
 </div>
 </header>
@@ -138,11 +179,11 @@ input[type=submit]:hover {
   <a href="needblood.htm"> Who need Blood?</a>
   <a href="search.htm"><i class="fa fa-fw fa-search"></i> Search</a>
   <a href="refer.htm"><i class="fa fa-fw fa-user-plus"></i> Refer a Friend</a>
-  <a class="active" href="contactus.htm"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+  <a href="contactus.htm"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
   <div style="float:right"><a href="login.htm">Login</a></li></div>
 
 </div>
-
+<br/>
   	<div id="scroll-news">
    			<span class="marquee-span">
    			<marquee behavior="scroll" scrollamount="15" scrolldelay="60" direction="left" width="100%" onMouseOver="this.stop();" onMouseOut="this.start();">
@@ -155,50 +196,28 @@ input[type=submit]:hover {
       </marquee>
    			</span>
    		</div>
+<br/><br/>
+      </form>
+<fieldset>
+      <h3>Register Your Blood Bank</h3>
+      <div class="container">
+  <form action="blood_bank.php" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+    <label for="mobilenumber">Mobile Number</label>
+    <input type="text" id="mobilenumber" name="mobilenumber" placeholder="Your mobile Number...">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+    <font class="frmcomments">Please Enter your current and active email address .</font>
+    <label for="address">Address</label>
+    <textarea id="address" name="address" placeholder="Mention your Address" style="width:100%;height:50px"></textarea>
 
-<br/><fieldset>
-<h2 style="color:red">Contact Us</h2>
-
-<div class="container">
-  <form action="contactus.php" method="post">
-  <div class="row">
-    <div class="col-25">
-      <label for="name">Full Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="name" name="name" placeholder="Your Full Name..">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="email">Email</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="email" name="email" placeholder="Your Email..">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Subject</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="subject" name="subject" placeholder="Write about subject..">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="message">Message</label>
-    </div>
-    <div class="col-75">
-      <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <input type="submit" value="submit" onclick="sendmessage()" name="submit">
-  </div>
+    <input type="submit" value="submit" name="submit">
   </form>
 </div>
 </fieldset>
+
+
 <div style="border-top: 1px solid #D8D8D8;border-bottom: 4px solid #B70407;text-align:center;">
    <div style="padding: 8px 0px;">
      <a href="aboutus.htm" class="footerclr">About Us</a>
@@ -215,10 +234,6 @@ input[type=submit]:hover {
    <div style="padding: 8px 0px;">Copyright &copy; Blood Donation 2019. All rights reserved.</div>
   </div>
  </div>
-<script type="text/javascript">
-function sendmessage() {
-  alert('Message Send Successfully...');
-}
-</script>
+<script type="text/javascript" src="blooddonation.js"></script>
 </body>
 </html>

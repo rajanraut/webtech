@@ -1,104 +1,276 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blood</title>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <title>Blood Donation Campaign</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link rel="stylesheet" type="text/css" href="./webproj/style.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+
+}
+* {
+  box-sizing: border-box;
+
+}
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-right:1px solid #bbb;
+}
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
+.navbar a last-node{
+    border-right:1px solid #bbb;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+@media screen and (max-width: 500px) {
+  .navbar a, .navbar input[type=text] {
+    float: none;
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .navbar input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  color:green;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+form {
+  border: 3px solid #f1f1f1;
+  font-family: Arial;
+}
+
+.container {
+  padding: 20px;
+  background-color: #f1f1f1;
+/*  */
+
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+.container1 {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container1 .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("./img/giveblood.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*.background {
+box-sizing: border-box;
+width: 100%;
+height: 150px;
+padding: 3px;
+background-image: url(/pix/samples/bg1.gif);
+border: 1px solid black;
+background-size: 100% 100%;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+  padding: 15px;
+}*/
+</style>
 </head>
 <body>
-<div class="header">
-  <table align="center" style="width: 100%">
-    <tr><td><img src="headerlogo.jpg" height="120" width="120"></td>
-      <td><h1>Blood Saves Lifes</h1></td>
-			<td>
-<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-<a href="https://www.twitter.com/" class="fa fa-twitter"></a>
-<a href="http://www.google.com" class="fa fa-google"></a>
-<a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
-<a href="http://www.youtube.com" class="fa fa-youtube"></a>
-<a href="http://www.instagram.com" class="fa fa-instagram"></a>
-	</td>
+  <header>
+    <div >
+<h2 align="center" style="color:red">Blood Donation</h2>
+</div>
+</header>
+<br/><br/>
+<div class="navbar">
+  <a class="active" href="index.htm"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="register.htm"><tr>Become A Donor</a>
+  <a href="donateblood.htm"><i class='fas'>&#xf004;</i><tr>Why Donate Blood?</a>
+  <a href="needblood.htm"> Who need Blood?</a>
+  <a href="search.htm"><i class="fa fa-fw fa-search"></i> Search</a>
+  <a  href="refer.htm"><i class="fa fa-fw fa-user-plus"></i> Refer a Friend</a>
+  <a href="contactus.htm"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+  <div style="float:right"><a href="login.htm">Login</a></li></div>
 
-  </tr>
-  </table>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.htm">Home</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="register.htm">Become a Donor</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="searchdonor.htm">Search Donor</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="eventmgnt.php">Events</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="aboutus.htm">About Us </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contactus.htm">Contact Us</a>
-      </li>
-    </ul>
+</div>
+
+  	<div id="scroll-news">
+   			<span class="marquee-span">
+   			<marquee behavior="scroll" scrollamount="15" scrolldelay="60" direction="left" width="100%" onMouseOver="this.stop();" onMouseOut="this.start();">
+   			<a href="./donateblood.htm"><b style="color:red;font-size:20px">
+   			Donate Blood Save Life....</b></a>
+   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      </marquee>
+   			</span>
+   		</div>
+
+<div class="container1">
+  <img src="./img/donation.png" alt="Blood Donation" style="width:100%;">
+  <div class="content">
+    <h3 align="center" ><strong>Donate Blood, Save Lifes</strong></h3>
+
   </div>
-</nav>
-<br>
-<div>
-   <h1><marquee>Donate Blood Save Life.....</marquee></mark></h1>
- </div>
-<div>
-
-       <h1>What is blood?</h1><br/>
-      <p> Whole blood is made up of red blood cells, white blood cells, platelets, and plasma. All but plasma are made in the marrow of bones, especially the vertebrae, ribs, hips, skull and sternum; these essential blood cells fight infection, carry oxygen and help control bleeding. Everyone's blood falls into one of four types. Blood types are an inherited trait.<img src="blood.jpeg" alt="blood" height="250px" width="250px" align="right"><br/><br/>
-                 Blood is a body fluid in humans and other animals that delivers necessary substances such as nutrients and oxygen to the cells and transports metabolic waste products away from those same cells. In vertebrates, it is composed of blood cells suspended in blood plasma.</p>
 </div>
-<h1>Why blood donation is important?</h1><br>
-<center>
+<hr/>
+<div class="container" background-image="url("./img/blooddonation.png")">
+<p>Every day blood transfusions take place and save millions of lives all over the world.
+  &nbsp;
+  However, there are still a number of countries who donot have adequate number of blood suppliers.
+  Some countries are even relying mostly on blood from people that ask money for their gesture.
+   It is alarming and saddening that things like this still happens.</p>
+     <p>Our Organization is trying to solve this problem of Blood Shortage.</p>
+<p>Blood donation is a service to humankind. By donating blood, you help someone in need and it can very well
+  save a precious life.</p>
 
-<iframe width="300" height="300" src="https://www.youtube.com/embed/obXjlquHlhE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="code-block code-block-1" style="margin: 8px auto; text-align: center; display: block; clear: both;">
 
-</center>
-<div>
-	 <h1>Blood Education</h1><br/>
-       <p>
-       	Someone needs a blood transfusion every two seconds, and one in ten patients entering a hospital will need blood. Over 500 people need to donate every day to meet the daily needs of the hospitals we serve and be prepared for emergencies.<img src="bloodtype.jpg" alt="bloodtype" height="150px" width="250px" align="right"> In order to collect the units needed, The Blood Connection must screen between 550-600 people a day for blood, platelet, plasma and double red cell units. Blood is good for only 42 days, so donors are needed every day to ensure a stable blood supply.
-       </p>
-       <br/>
-       <br/>
-       <h1>Who can donate blood?</h1><br/>
-       <p>
+<span id="placeholder"></span>
 
-       	You are eligible to donate blood if you are in good health, weigh at least 110 pounds and are 17 years or older.
-
-     You are not eligible to donate blood if you:
-    <ul>
-   <li> Have ever used self-injected drugs (non-prescription)</li>
-    <li>Had hepatitis</li>
-    <li>Are in a high-risk group for AIDS</li>
-    </ul>
-      </p>
 </div>
-<div class="footer" align="center">
-	<p><h4>&copy; 2018 Blood Saves Life</h4></p>
-</div>
+<p>One of the main reasons why people are not donating blood is that some of them are not fully aware of its
+  benefits and some are even afraid to do so because of misinformation.&nbsp;To better understand the concept,
+  we have compiled some basic facts about blood donation.</p>
+<p>The process is as simple as:</p>
+<ol>
+<li>Registration</li>
+<li>Mini-physical exam and medical history</li>
+<li>Donation of blood</li>
+<li>Refreshments</li>
+</ol>
+<p>Our Team is helping people who are in urgent need of blood by providing information of Donors.</p>
+</div><hr/>
 
+<div class="container">
+  <p style="color:rgb(255,0,0);"><strong>Promoting Blood Donation-</strong></p>
+  <p>The blood is red gold in time of saving a life.</p>
+  <p>Share a little, care a little and Donate Blood.</p>
+  <p>Five minutes of your time + 350 ml. of your blood = One life saved.</p>
+  <p>Blood is meant to circulate. Pass it around.</p>
+  <p>Donation of Blood means a few minutes to you but a lifetime for somebody else.</p>
+  <p>Blood is the most precious thing in this world a human being have,If you have some more queries and questions
+     on blood donation Please do register on our sites.</p>
+</div><hr/>
+<fieldset>
+<h4 style="color:red;">Slogan of our Organization</h4>
+    <div class="background">
+</div>
+<div class="bg"></div>
+
+<p>Slogan of our Site is to provide blood to required person at anytime. </p>
+<img src="./img/giveblood.png" style="border:1px solid black;">
+</fieldset>
+<!--  </div>
+  <div class="column">
+    <img src="./img/bloodslogan2.png" alt="Slogan" style="width:fit-to-screen">
+  </div><br/>-->
+
+      <div style="border-top: 1px solid #D8D8D8;border-bottom: 4px solid #B70407;text-align:center;">
+      	 <div style="padding: 8px 0px;">
+      		 <a href="aboutus.htm" class="footerclr">About Us</a>
+      		 &nbsp;&nbsp;|&nbsp;&nbsp;
+      		 <a href="policy.htm" class="footerclr">Privacy Policy</a>
+      		 &nbsp;&nbsp;|&nbsp;&nbsp;
+      		 <a href="bloodbank.htm" class="footerclr">Register Your Blood Bank</a>
+      		 &nbsp;&nbsp;|&nbsp;&nbsp;
+      		 <a href="share-experience.htm" class="footerclr">Share Your Experience</a>
+      	 </div>
+      	 <div class="dotline"><img src="./img/trans.gif" width="1" height="1" border="0" alt=""></div>
+
+      	 <div style="padding: 8px 0px;">Copyright &copy; Blood Donation 2019. All rights reserved.</div>
+        </div>
+       </div>
+<script type="text/javascript" src="blooddonation.js"></script>
 </body>
 </html>
